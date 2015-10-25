@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B6899BE61BD89B170048EFA0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6899BE51BD89B170048EFA0 /* main.cpp */; };
+		B6899BEF1BD9E3C10048EFA0 /* StringOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6899BED1BD9E3C10048EFA0 /* StringOperation.cpp */; };
+		B6899BF21BD9E4050048EFA0 /* ListNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6899BF01BD9E4050048EFA0 /* ListNode.cpp */; };
+		B6899BF51BDB58E50048EFA0 /* Third.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6899BF31BDB58E50048EFA0 /* Third.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		B6899BE21BD89B170048EFA0 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6899BE51BD89B170048EFA0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B6899BED1BD9E3C10048EFA0 /* StringOperation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringOperation.cpp; sourceTree = "<group>"; };
+		B6899BEE1BD9E3C10048EFA0 /* StringOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringOperation.h; sourceTree = "<group>"; };
+		B6899BF01BD9E4050048EFA0 /* ListNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ListNode.cpp; sourceTree = "<group>"; };
+		B6899BF11BD9E4050048EFA0 /* ListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
+		B6899BF31BDB58E50048EFA0 /* Third.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Third.cpp; sourceTree = "<group>"; };
+		B6899BF41BDB58E50048EFA0 /* Third.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Third.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +66,13 @@
 		B6899BE41BD89B170048EFA0 /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
+				B6899BED1BD9E3C10048EFA0 /* StringOperation.cpp */,
+				B6899BF31BDB58E50048EFA0 /* Third.cpp */,
+				B6899BF41BDB58E50048EFA0 /* Third.h */,
+				B6899BEE1BD9E3C10048EFA0 /* StringOperation.h */,
 				B6899BE51BD89B170048EFA0 /* main.cpp */,
+				B6899BF01BD9E4050048EFA0 /* ListNode.cpp */,
+				B6899BF11BD9E4050048EFA0 /* ListNode.h */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -118,6 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6899BF21BD9E4050048EFA0 /* ListNode.cpp in Sources */,
+				B6899BF51BDB58E50048EFA0 /* Third.cpp in Sources */,
+				B6899BEF1BD9E3C10048EFA0 /* StringOperation.cpp in Sources */,
 				B6899BE61BD89B170048EFA0 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +253,7 @@
 				B6899BEB1BD89B170048EFA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

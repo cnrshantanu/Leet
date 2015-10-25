@@ -7,72 +7,34 @@
 //
 
 #include <iostream>
+#include "Third.h"
+#include "StringOperation.h"
 using namespace std;
 
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
-void printList(ListNode *list);
-ListNode* addTwoNumbers(ListNode* l1,ListNode* l2);
-ListNode* populate(int a[],int size);
+
+
 
 int main(int argc, const char * argv[]) {
     
-    int number1[] = {2,6,6,3};
-    int number2[] = {5,6,4};
-    ListNode* l1 = populate(number1,4);
-    ListNode* l2 = populate(number2,3);
-    printList(addTwoNumbers(l1, l2));
+    int a[5] = {1,2,37,21,25};
+    int b[5] = {21,22,23,28,29};
+
+    int d[] = {21,22,23,28,29,54,55};
+    int c[] = {1,2,7,21,25,48,49};
+
+    vector<int> num,num1,num2,num3;
+    for(int i=0;i<5;i++){
+        num.push_back(a[i]);
+        num1.push_back(b[i]);
+    }
+    
+    for(int i=0;i<7;i++){
+        num2.push_back(c[i]);
+        num3.push_back(d[i]);
+    }
+    //cout<<findMedianSortedArrays(num, num1);
+    findMedianSortedArrays(num3, num2);
     return 0;
 }
 
-ListNode* addTwoNumbers(ListNode* l1,ListNode* l2){
-    ListNode *temp = NULL,*start = NULL;
-    int carry = 0;
-    
-    temp = new ListNode(l1->val+l2->val);
-    start = temp;
-    l1 = l1->next;
-    l2 = l2->next;
-    carry = temp->val / 10;
-    temp->val = temp->val % 10;
 
-    while(l1 != NULL || l2!= NULL){
-        int val1,val2;
-        val1 = (l1 == NULL) ? 0 : l1->val;
-        val2 = (l2 == NULL) ? 0 : l2->val;
-        temp->next = new ListNode(val1+val2+carry);
-        l1 = (l1 == NULL) ? NULL : l1->next;
-        l2 = (l2 == NULL) ? NULL : l2->next;
-        temp = temp->next;
-        carry = temp->val / 10;
-        temp->val = temp->val % 10;
-        
-    }
-    if(carry > 0){
-        temp->next = new ListNode(carry);
-    }
-    return start;
-}
-
-ListNode* populate(int a[],int size){
-    ListNode *temp = nullptr,*start;
-    temp = new ListNode(a[0]);
-    start = temp;
-    for(int i = 1;i<size;i++){
-        temp->next = new ListNode(a[i]);
-        temp = temp->next;
-    }
-    return start;
-}
-
-void printList(ListNode *list){
-    cout<<"List starts \n";
-    while (list!= NULL) {
-        cout<<list->val<<"\n";
-        list = list->next;
-    }
-    cout<<"List ends \n";
-}
