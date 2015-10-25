@@ -14,5 +14,7 @@
 using namespace std;
 
 double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2);
+double returnFinalMedain(vector<int>& nums1, vector<int>& nums2);
+void printVector(vector<int> vec);
 
 #endif /* defined(__LeetCode__Third__) */
