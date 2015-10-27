@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FCD8D4B1-5191-4AFF-9DAE-3DDD9B75460F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>LeetCode</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4C5B6A1269E88AE1DA00AB3EB52666B76250DCD2</key>
 		<string>https://github.com/cnrshantanu/Leet.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>LeetCode.xcodeproj</string>
+	<string>LeetCode.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4C5B6A1269E88AE1DA00AB3EB52666B76250DCD2</key>

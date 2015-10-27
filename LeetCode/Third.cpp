@@ -70,16 +70,21 @@ double returnFinalMedain(vector<int>& nums1, vector<int>& nums2) {
         int m1,m2;
         if(nums1.size() == 1){
             if(length%2!= 0) {
-                if(nums2.size()%2 != 0) {
-                    if(nums1.at(0) < nums2.at(((nums2.size()+1)/2)-1) && nums1.at(0) > nums2.at(((nums2.size()+1)/2) - 2))
-                        return nums1.at(0);
-                    else
-                        getMedian(nums2);
-                }else {
-                    if (nums2.at(nums2.size()/2)+nums2.at(((nums2.size())/2)-1))
-                }
-            
+                if(nums1.at(0) < nums2.at(((nums2.size())/2)-1))
+                    return nums2.at(((nums2.size())/2)-1);
+                else if (nums1.at(0) > nums2.at(((nums2.size())/2)))
+                    return nums2.at(((nums2.size())/2));
+                else
+                    nums1.at(0);
+            }else {// 1 // 2 3 4 5 6
+                if (nums1.at(0) < nums2.at(((nums2.size()+1)/2)-2))
+                    return (double)(nums2.at(((nums2.size()+1)/2)-2)+nums2.at(((nums2.size()+1)/2)-1))/(double)2;
+                else if (nums1.at(0) > nums2.at(((nums2.size()+1)/2)))
+                    return (double)(nums2.at(((nums2.size()+1)/2))+nums2.at(((nums2.size()+1)/2)-1))/(double)2;
+                else
+                    return (double)(nums1.at(0)+nums2.at(((nums2.size()+1)/2)-1))/(double)2;
             }
+        
             /*if(length%2!= 0) {
                 if(nums2.size() == 3)
                     return -1;
