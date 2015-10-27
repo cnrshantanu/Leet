@@ -16,15 +16,15 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    int a[5] = {3,2,37,21,25};
-    int b[6] = {1,2,4,23,28,29};
+    int a[5] = {0,0,0,2,25};
+    int b[6] = {1,3,4,6,28,29}; // 0 , 1, 3, 4, 6 , 28
 
     vector<int> num,num1;
     for(int i=0;i<1;i++){
         num.push_back(a[i]);
         
     }
-    for(int i=0;i<3;i++){
+    for(int i=0;i<5;i++){
         num1.push_back(b[i]);
     }
     //findMedianSortedArrays(num, num1);

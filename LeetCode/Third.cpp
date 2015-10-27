@@ -5,7 +5,9 @@
 //  Created by Shantanu Das on 24/10/15.
 //  Copyright (c) 2015 Zakoi. All rights reserved.
 //
-
+// 1 || 2 3 4 || 1 2 3
+// 4 || 1 2 3 || 2 3 4
+// 3 || 1 2 4 || 2 4 3
 #include "Third.h"
 #include <tgmath.h>
 #include <iostream>
@@ -29,16 +31,9 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
     if (median!=-1) {
         return median;
     }
-    if(nums1.size() != 1 && nums2.size() != 1) {
-        n1 = (getMedian(nums1)>getMedian(nums2)) ? &nums1 : &nums2;
-        n2 = (getMedian(nums1)>getMedian(nums2)) ? &nums2 : &nums1;
-    } else if (nums1.size() == 1) {
-        n1 = &nums2;
-        n2 = &nums1;
-    } else if (nums2.size() == 1) {
-        n1 = &nums1;
-        n2 = &nums2;
-    }
+    n1 = (getMedian(nums1)>getMedian(nums2)) ? &nums1 : &nums2;
+    n2 = (getMedian(nums1)>getMedian(nums2)) ? &nums2 : &nums1;
+    
     if(n1->size()%2 != 0){
         if(n1->size()>2)
             n1->resize((n1->size()+1)/2);
@@ -71,26 +66,43 @@ double returnFinalMedain(vector<int>& nums1, vector<int>& nums2) {
         return getMedian(nums1);
     } else if(nums1.size() == 1 && nums2.size() == 1) {
         return (double)(nums1.at(0)+nums2.at(0))/(double)2;
-    } else if(nums1.size() < 3 && nums2.size() < 3) {
+    } else if(nums1.size()+ nums2.size() <= 4) {
         int m1,m2;
         if(nums1.size() == 1){
             if(length%2!= 0) {
+                if(nums2.size()%2 != 0) {
+                    if(nums1.at(0) < nums2.at(((nums2.size()+1)/2)-1) && nums1.at(0) > nums2.at(((nums2.size()+1)/2) - 2))
+                        return nums1.at(0);
+                    else
+                        getMedian(nums2);
+                }else {
+                    if (nums2.at(nums2.size()/2)+nums2.at(((nums2.size())/2)-1))
+                }
+            
+            }
+            /*if(length%2!= 0) {
+                if(nums2.size() == 3)
+                    return -1;
                 m1 = max(nums2.at(1),max(nums1.at(0),nums2.at(0)));
                 m2 = min(nums2.at(1),min(nums1.at(0),nums2.at(0)));
                 return nums2.at(0)+nums2.at(1)+nums1.at(0) -m1 -m2;
             } else {
-                m1 = max(nums1.at(0),nums2.at(0));
-                m2 = nums2.at(1);
-            }
+                m1 = max(max(nums1.at(0),max(nums2.at(0),nums2.at(1))),nums2.at(2));
+                m2 = min(min(nums1.at(0),min(nums2.at(0),nums2.at(1))),nums2.at(2));
+                return (double)(nums2.at(0)+nums2.at(1)+nums2.at(2) + nums1.at(0) -m2 -m1)/(double)2;
+            }*/
         } else if(nums2.size() == 1){
-            if(length%2!= 0) {
+            /*if(length%2!= 0) {
+                if(nums1.size() == 3)
+                    return -1;
                 m1 = max(nums1.at(1),max(nums1.at(0),nums2.at(0)));
                 m2 = min(nums1.at(1),min(nums1.at(0),nums2.at(0)));
                 return nums1.at(0)+nums1.at(1)+nums2.at(0) -m1 -m2;
             } else {
-                m1 = max(nums1.at(0),nums2.at(0));
-                m2 = nums1.at(1);
-            }
+                m1 = max(max(nums2.at(0),max(nums1.at(0),nums1.at(1))),nums1.at(2));
+                m2 = min(min(nums2.at(0),min(nums1.at(0),nums1.at(1))),nums1.at(2));
+                return (double)(nums1.at(0)+nums1.at(1)+nums1.at(2) + nums2.at(0) -m1 -m2)/(double)2;
+            }*/
         } else {
             m1 = max(nums1.at(0),nums2.at(0));
             m2 = min(nums1.at(1),nums2.at(1));
