@@ -11,16 +11,13 @@
 #include "StringOperation.h"
 using namespace std;
 
-
-
-
 int main(int argc, const char * argv[]) {
     
-    int a[5] = {0,0,0,2,25};
-    int b[6] = {1,3,4,6,28,29}; // 0 , 1, 3, 4, 6 , 28
+    int a[5] = {2,3,4, 5,25};
+    int b[6] = {1,5,6,8,28,29}; // 0 , 1, 3, 4, 6 , 28
 
     vector<int> num,num1;
-    for(int i=0;i<1;i++){
+    for(int i=0;i<3;i++){
         num.push_back(a[i]);
         
     }
@@ -28,8 +25,10 @@ int main(int argc, const char * argv[]) {
         num1.push_back(b[i]);
     }
     //findMedianSortedArrays(num, num1);
+    printVector(num);
+    printVector(num1);
     double median = findMedianSortedArrays(num, num1);
-    cout<<"The median is "<<median;
+    cout<<"\n The median is "<<median;
     return 0;
 }
 
