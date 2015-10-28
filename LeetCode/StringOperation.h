@@ -13,5 +13,8 @@
 #include <iostream>
 
 int lengthOfLongestSubstring(std::string s);
+std::string palindrome(int low,int high, std::string &s);
+std::string longestPalindrome(std::string s);
+std::string longestPalindrome(std::string s,bool _val);
 
 #endif /* defined(__LeetCode__StringOperation__) */
